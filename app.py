@@ -14,7 +14,7 @@ INSURANCE PREDICTOR WEB APPP
 ## -----------
 # Libraries
 ## -----------
-
+pip install --upgrade pip
 import matplotlib.pyplot as plt
 import missingno as ms
 import numpy as np
@@ -265,3 +265,4 @@ df.drop(["region"], axis=1, inplace = True)
 
 st.sidebar.write("**PREDICTION**")
 st.sidebar.write("Given the inputed parameter, the insuracnce charge would be: $" + str(round(reg.predict(df)[0],2)))
+streamlit run app.py
